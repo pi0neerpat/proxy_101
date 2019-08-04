@@ -1,0 +1,321 @@
+{
+  "contractName": "NewShipBuild",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "registry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fuelSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "previousCaptains",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "captain",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5061045b806100206000396000f3fe608060405260043610610067576000357c01000000000000000000000000000000000000000000000000000000009004806306fdde031461006c5780637b103999146100fc578063bf61aa741461018c578063edfdf078146101b7578063f55ebb8f14610232575b600080fd5b34801561007857600080fd5b50610081610289565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100c15780820151818401526020810190506100a6565b50505050905090810190601f1680156100ee5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561010857600080fd5b50610111610327565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610151578082015181840152602081019050610136565b50505050905090810190601f16801561017e5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561019857600080fd5b506101a16103c5565b6040518082815260200191505060405180910390f35b3480156101c357600080fd5b506101f0600480360360208110156101da57600080fd5b81019080803590602001909291905050506103cb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561023e57600080fd5b50610247610409565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561031f5780601f106102f45761010080835404028352916020019161031f565b820191906000526020600020905b81548152906001019060200180831161030257829003601f168201915b505050505081565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103bd5780601f10610392576101008083540402835291602001916103bd565b820191906000526020600020905b8154815290600101906020018083116103a057829003601f168201915b505050505081565b60025481565b6004818154811015156103da57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058202c191da18e889af452fcb2a9493faffd36a07de1b2406768e508190b41cddcac0029",
+  "deployedBytecode": "0x608060405260043610610067576000357c01000000000000000000000000000000000000000000000000000000009004806306fdde031461006c5780637b103999146100fc578063bf61aa741461018c578063edfdf078146101b7578063f55ebb8f14610232575b600080fd5b34801561007857600080fd5b50610081610289565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100c15780820151818401526020810190506100a6565b50505050905090810190601f1680156100ee5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561010857600080fd5b50610111610327565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610151578082015181840152602081019050610136565b50505050905090810190601f16801561017e5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561019857600080fd5b506101a16103c5565b6040518082815260200191505060405180910390f35b3480156101c357600080fd5b506101f0600480360360208110156101da57600080fd5b81019080803590602001909291905050506103cb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561023e57600080fd5b50610247610409565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561031f5780601f106102f45761010080835404028352916020019161031f565b820191906000526020600020905b81548152906001019060200180831161030257829003601f168201915b505050505081565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103bd5780601f10610392576101008083540402835291602001916103bd565b820191906000526020600020905b8154815290600101906020018083116103a057829003601f168201915b505050505081565b60025481565b6004818154811015156103da57fe5b906000526020600020016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058202c191da18e889af452fcb2a9493faffd36a07de1b2406768e508190b41cddcac0029",
+  "sourceMap": "52:77:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:77:2;;;;;;;",
+  "deployedSourceMap": "52:77:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;50:18:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;50:18:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;50:18:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;74:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:22:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;74:22:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;102:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;102:25:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;93:33:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:33:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;93:33:2;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;133:22:8;;8:9:-1;5:2;;;30:1;27;20:12;5:2;133:22:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;50:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;74:22::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;102:25::-;;;;:::o;93:33:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;133:22:8:-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.1;\n\nimport \"./ShipBuild.sol\";\n\ncontract NewShipBuild is ShipBuild {\n    address[] public previousCaptains;\n}",
+  "sourcePath": "/home/thisguy/repos/proxy_101/contracts/NewShipBuild.sol",
+  "ast": {
+    "absolutePath": "/home/thisguy/repos/proxy_101/contracts/NewShipBuild.sol",
+    "exportedSymbols": {
+      "NewShipBuild": [
+        147
+      ]
+    },
+    "id": 148,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 140,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/home/thisguy/repos/proxy_101/contracts/ShipBuild.sol",
+        "file": "./ShipBuild.sol",
+        "id": 141,
+        "nodeType": "ImportDirective",
+        "scope": 148,
+        "sourceUnit": 416,
+        "src": "25:25:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 142,
+              "name": "ShipBuild",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 415,
+              "src": "77:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ShipBuild_$415",
+                "typeString": "contract ShipBuild"
+              }
+            },
+            "id": 143,
+            "nodeType": "InheritanceSpecifier",
+            "src": "77:9:2"
+          }
+        ],
+        "contractDependencies": [
+          415
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 147,
+        "linearizedBaseContracts": [
+          147,
+          415
+        ],
+        "name": "NewShipBuild",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 146,
+            "name": "previousCaptains",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "93:33:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 144,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "93:7:2",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 145,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "93:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 148,
+        "src": "52:77:2"
+      }
+    ],
+    "src": "0:129:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/thisguy/repos/proxy_101/contracts/NewShipBuild.sol",
+    "exportedSymbols": {
+      "NewShipBuild": [
+        147
+      ]
+    },
+    "id": 148,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 140,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/home/thisguy/repos/proxy_101/contracts/ShipBuild.sol",
+        "file": "./ShipBuild.sol",
+        "id": 141,
+        "nodeType": "ImportDirective",
+        "scope": 148,
+        "sourceUnit": 416,
+        "src": "25:25:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 142,
+              "name": "ShipBuild",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 415,
+              "src": "77:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ShipBuild_$415",
+                "typeString": "contract ShipBuild"
+              }
+            },
+            "id": 143,
+            "nodeType": "InheritanceSpecifier",
+            "src": "77:9:2"
+          }
+        ],
+        "contractDependencies": [
+          415
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 147,
+        "linearizedBaseContracts": [
+          147,
+          415
+        ],
+        "name": "NewShipBuild",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 146,
+            "name": "previousCaptains",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "93:33:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$dyn_storage",
+              "typeString": "address[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 144,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "93:7:2",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 145,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "93:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                "typeString": "address[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 148,
+        "src": "52:77:2"
+      }
+    ],
+    "src": "0:129:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-08-04T15:04:42.281Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

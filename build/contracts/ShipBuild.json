@@ -1,0 +1,372 @@
+{
+  "contractName": "ShipBuild",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "registry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fuelSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "captain",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610397806100206000396000f3fe60806040526004361061005c576000357c01000000000000000000000000000000000000000000000000000000009004806306fdde03146100615780637b103999146100f1578063bf61aa7414610181578063f55ebb8f146101ac575b600080fd5b34801561006d57600080fd5b50610076610203565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b657808201518184015260208101905061009b565b50505050905090810190601f1680156100e35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100fd57600080fd5b506101066102a1565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014657808201518184015260208101905061012b565b50505050905090810190601f1680156101735780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561018d57600080fd5b5061019661033f565b6040518082815260200191505060405180910390f35b3480156101b857600080fd5b506101c1610345565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102995780601f1061026e57610100808354040283529160200191610299565b820191906000526020600020905b81548152906001019060200180831161027c57829003601f168201915b505050505081565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103375780601f1061030c57610100808354040283529160200191610337565b820191906000526020600020905b81548152906001019060200180831161031a57829003601f168201915b505050505081565b60025481565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058206fe9f017c89ddfdc666157e198c28559d3ce42fb3eaeb8e4a3149b03f6839b420029",
+  "deployedBytecode": "0x60806040526004361061005c576000357c01000000000000000000000000000000000000000000000000000000009004806306fdde03146100615780637b103999146100f1578063bf61aa7414610181578063f55ebb8f146101ac575b600080fd5b34801561006d57600080fd5b50610076610203565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100b657808201518184015260208101905061009b565b50505050905090810190601f1680156100e35780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b3480156100fd57600080fd5b506101066102a1565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561014657808201518184015260208101905061012b565b50505050905090810190601f1680156101735780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561018d57600080fd5b5061019661033f565b6040518082815260200191505060405180910390f35b3480156101b857600080fd5b506101c1610345565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102995780601f1061026e57610100808354040283529160200191610299565b820191906000526020600020905b81548152906001019060200180831161027c57829003601f168201915b505050505081565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103375780601f1061030c57610100808354040283529160200191610337565b820191906000526020600020905b81548152906001019060200180831161031a57829003601f168201915b505050505081565b60025481565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a723058206fe9f017c89ddfdc666157e198c28559d3ce42fb3eaeb8e4a3149b03f6839b420029",
+  "sourceMap": "25:134:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:134:8;;;;;;;",
+  "deployedSourceMap": "25:134:8:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;50:18;;8:9:-1;5:2;;;30:1;27;20:12;5:2;50:18:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;50:18:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;74:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:22:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;74:22:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;102:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;102:25:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;133:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;133:22:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;50:18;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;74:22::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;102:25::-;;;;:::o;133:22::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.1;\n\ncontract ShipBuild {\n    string public name;\n    string public registry;\n    uint256 public fuelSupply;\n    address public captain;\n\n}",
+  "sourcePath": "/home/thisguy/repos/proxy_101/contracts/ShipBuild.sol",
+  "ast": {
+    "absolutePath": "/home/thisguy/repos/proxy_101/contracts/ShipBuild.sol",
+    "exportedSymbols": {
+      "ShipBuild": [
+        415
+      ]
+    },
+    "id": 416,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 406,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 415,
+        "linearizedBaseContracts": [
+          415
+        ],
+        "name": "ShipBuild",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 408,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "50:18:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 407,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "50:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 410,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "74:22:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 409,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "74:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 412,
+            "name": "fuelSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "102:25:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 411,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "102:7:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 414,
+            "name": "captain",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "133:22:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 413,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "133:7:8",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 416,
+        "src": "25:134:8"
+      }
+    ],
+    "src": "0:159:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/thisguy/repos/proxy_101/contracts/ShipBuild.sol",
+    "exportedSymbols": {
+      "ShipBuild": [
+        415
+      ]
+    },
+    "id": 416,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 406,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 415,
+        "linearizedBaseContracts": [
+          415
+        ],
+        "name": "ShipBuild",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 408,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "50:18:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 407,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "50:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 410,
+            "name": "registry",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "74:22:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 409,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "74:6:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 412,
+            "name": "fuelSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "102:25:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 411,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "102:7:8",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 414,
+            "name": "captain",
+            "nodeType": "VariableDeclaration",
+            "scope": 415,
+            "src": "133:22:8",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 413,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "133:7:8",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 416,
+        "src": "25:134:8"
+      }
+    ],
+    "src": "0:159:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2019-08-04T15:04:42.282Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
