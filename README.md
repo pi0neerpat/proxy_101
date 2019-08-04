@@ -1,88 +1,113 @@
 # Proxy Boxy
 
-Built for Trufflecon in Redmond, Washington
-Aug 2-4 2019
-Proxy 101 Save Gas and prevent Headaches
+Learn to create, deploy, and interact with Proxy Contracts
 
-## Overview
+Created with <3 for my talk **Proxy 101 Save Gas and prevent Headaches** at **Trufflecon in Redmond, Washington
+Aug 2-4 2019**
 
-0. What is a Proxy
-1. Use Remix to play with the contracts
-1. Closer look at the contracts
-1. Use Truffle and OneClickDapp to go through the example again
-1. Best practices and use-cases
+<img width=300 src='./box-img-lg.png'/>
 
 ## 0. What is a Proxy
 
-## 1. Use Remix to play with the contracts
+This tutorial is adapted from [EIP 1822](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1822.md) Universal Upgradeable Proxy Standard (UUPS)
+
+## 1. (optional) Use Remix to play with the contracts
 
 [Remix Example](https://remix.ethereum.org/#gist=6da9368618132420d958dfbba5db54eb)
 
 ## 2. Closer look at the contracts
 
+This is the Proxy Contract
+
+```js
+pragma solidity ^0.5.1;
+
+contract Proxy {
+    // Code position in storage is keccak256("PROXIABLE") = "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7"
+    constructor(bytes memory constructData, address contractLogic) public {
+        // save the code address
+        assembly { // solium-disable-line
+            sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, contractLogic)
+        }
+        (bool success, bytes memory _ ) = contractLogic.delegatecall(constructData); // solium-disable-line
+        require(success, "Construction failed");
+    }
+
+    function() external payable {
+        assembly { // solium-disable-line
+            let contractLogic := sload(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7)
+            calldatacopy(0x0, 0x0, calldatasize)
+            let success := delegatecall(sub(gas, 10000), contractLogic, 0x0, calldatasize, 0, 0)
+            let retSz := returndatasize
+            returndatacopy(0, 0, retSz)
+            switch success
+            case 0 {
+                revert(0, retSz)
+            }
+            default {
+                return(0, retSz)
+            }
+        }
+    }
+}
+```
+
+This is the part which is added to your contract. It enables upgradability
+
+```js
+pragma solidity ^0.5.1;
+
+contract Proxiable {
+    // Code position in storage is keccak256("PROXIABLE") = "0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7"
+
+    function updateCodeAddress(address newAddress) internal {
+        require(
+            bytes32(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7) == Proxiable(newAddress).proxiableUUID(),
+            "Not compatible"
+        );
+        assembly { // solium-disable-line
+            sstore(0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7, newAddress)
+        }
+    }
+    function proxiableUUID() public pure returns (bytes32) {
+        return 0xc5f16f0fcc639fa48a6947836d9850f504798523bf8c9a3a87d5876cf622bcf7;
+    }
+}
+```
+
 ## 3. Use Truffle and OneClickDapp to go through the example again
 
-## 4. Best practices and use-cases
+Download the "Proxy Boxy" Truffle Box
 
-You are sailing the high seas. Your ship runs out of fuel. How do you upgrade your ship easily to add a RENEWABLE ENERGY source? How can we make it easy to
+`truffle unbox https://github.com/pi0neerpat/proxy_101`
 
-`truffle migrate`
+Set up your environment using `truffle develop`
 
-# Welcome to truffle-proxy
+Copy the private key for the first wallet. Open Metamask and create a new wallet using the key.
 
-Winning project at **ConsenSys Grants Hackathon - New York - July 2019**
+Then create + switch to the "Truffle Develop" network at `http://127.0.0.1:9545/`
 
-> See **truffle-proxy-ui** [here](https://github.com/mdcoon/truffle-proxy-ui)
+Back in the console run `migrate`
 
-> Extend Truffle CLI with [EIP-1822](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1822.md) proxy support. Proxy support provides a simple upgrade path for contracts to maintain storage, while making changes to the underlying contract implementation.
+You will see an output like this
 
-## Install
+```
+Access ShipA via the Proxy at:
 
-```sh
-// tip: to start a new truffle project:
-// truffle init
-// within your truffle project:
-npm init -y
-npm install --save-dev git+https://github.com/mdcoon/truffle-proxy
+    https://oneclickdapp.com/motel-disco
 ```
 
-Add the following to your `truffle-config.js`
+Open the first link and inspect your ship using `fuelSupply` and `captain`
 
-```json
-  plugins: [
-    "truffle-proxy"
-  ]
+when you're ready to upgrade follow the prompt
+
 ```
+When you're ready to upgrade call the function abandonShipTo()
+on ShipA using the address for the ShipB logic contract
 
-## Usage
+0xb2FC7d4271cA7c96Fb9F4585a1C0871f01107991
 
-### Add proxy support to a truffle project
+Access ShipB via the Proxy at:
 
-Generates EIP-1820 compatible proxy implementation along with example files and
-unit tests for your project.
-
-```sh
-truffle run create-proxy
-```
-
------Pat's notes--------
-Run truffle migrate before the next step
-line 32 in Sample.sol add a ";"
-
-### Run unit tests
-
-Executes all unit tests against an embedded Ganache blockchain compatible with
-proxy contract.
-
-```sh
-truffle run test-proxy
-```
-
-### Display summary network info
-
-Displays a summary of network / address information for deployed contracts.
-Includes details highlighting proxy contracts.
-
-```sh
-truffle run summarize-proxy
+     https://oneclickdapp.com/lady-escort
 ```
