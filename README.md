@@ -5,6 +5,8 @@ Learn to create, deploy, and interact with Proxy Contracts
 Created with <3 for my talk **Proxy 101 Save Gas and prevent Headaches** at **Trufflecon in Redmond, Washington
 Aug 2-4 2019**
 
+View the presentation [here](https://docs.google.com/presentation/d/1XiFpea4iC9lYA9MGQRwWfk2JzvK9Xn_EGXy_zdR5nJE/edit?usp=sharing)
+
 <img width=300 src='./box-img-lg.png'/>
 
 ## 0. What is a Proxy
