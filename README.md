@@ -15,7 +15,7 @@ This tutorial is adapted from [EIP 1822](https://github.com/ethereum/EIPs/blob/m
 
 ## 1. (optional) Use Remix to play with the contracts
 
-[Remix Example](https://remix.ethereum.org/#gist=6da9368618132420d958dfbba5db54eb)
+[Remix Example](https://remix-alpha.ethereum.org/#gist=6da9368618132420d958dfbba5db54eb)
 
 ## 2. Closer look at the contracts
 
